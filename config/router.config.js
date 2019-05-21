@@ -6,27 +6,27 @@ export default [
     Routes: ['src/pages/Authorized'],
     routes: [
       // dashboard
-      { path: '/', redirect: '/dashboard/analysis'},
+      { path: '/', redirect: '/business/welcome'},
       {
-        path: '/dashboard',
-        name: 'dashboard',
-        icon: 'dashboard',
+        path: '/business',
+        name: 'business',
+        icon: 'business',
         routes: [
           {
-            path: '/dashboard/analysis',
-            name: 'analysis',
-            component: './Dashboard/Analysis',
+            path: '/business/welcome',
+            name: 'welcome',
+            component: './Business/Welcome',
           },
           {
-            path: '/dashboard/monitor',
-            name: 'monitor',
-            component: './Dashboard/Monitor',
+            path: '/business/userNoInput',
+            name: 'userNoInput',
+            component: './Business/userNoInput',
           },
           {
-            path: '/dashboard/workplace',
-            name: 'workplace',
-            component: './Dashboard/Workplace',
-          },
+            path: '/business/userInfo',
+            name: 'userInfo',
+            component: './Business/userInfo',
+          }
         ],
       },
       {

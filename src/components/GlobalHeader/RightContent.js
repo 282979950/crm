@@ -23,7 +23,7 @@ export default class GlobalHeaderRight extends PureComponent {
     const { time } = this.state;
     return (
       <div className={styles.right}>
-        <span className={styles.right.time}>{"北京时间:" + moment(time).format('YYYY-MM-DD HH:mm:ss')}</span>
+        <span className={styles.time}>{"当前时间:" + moment(time).format('YYYY-MM-DD HH:mm:ss')}</span>
       </div>
     );
   }
