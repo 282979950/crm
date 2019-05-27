@@ -5,7 +5,7 @@ import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
 import classNames from 'classnames';
 import Media from 'react-media';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.png';
 import Footer from './Footer';
 import Header from './Header';
 import Context from './MenuContext';
@@ -95,7 +95,6 @@ class BasicLayout extends React.Component {
           <Content className={styles.content} style={contentStyle}>
             {children}
           </Content>
-          <Footer />
         </Layout>
       </Layout>
     );

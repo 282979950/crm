@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import Debounce from 'lodash-decorators/debounce';
 import styles from './index.less';
 import RightContent from './RightContent';
-import logo from '../../assets/武天logo.jpg';
+import logoText from '../../assets/logo-text.png';
+import logo from '../../assets/logo.png';
 
 export default class GlobalHeader extends PureComponent {
 
@@ -21,7 +22,9 @@ export default class GlobalHeader extends PureComponent {
     const { collapsed } = this.props;
     return (
       <div className={styles.header}>
-        <img className={styles.logo} src={logo} alt="logo" height={48}/>
+        <img className={styles.logoText} src={logoText}/>
+        <img className={styles.logo} src={logo}/>
+        <span className={styles.title}>天然气自助服务平台</span>
         <RightContent {...this.props} />
       </div>
     );

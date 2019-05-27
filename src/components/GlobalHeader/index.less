@@ -4,24 +4,48 @@
 
 .header {
   position: relative;
-  height: @layout-header-height;
+  height: 110px;
   padding: 0;
-  background: #fff;
+  background: #FFF;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 }
 
-.logo {
+.logoText {
   display: inline-block;
-  height: @layout-header-height;
-  padding: 0 0 0 24px;
+  height: 110px;
+  padding: 23px 0 23px 32px;
   font-size: 20px;
-  line-height: @layout-header-height;
+  line-height: 110px;
   vertical-align: top;
   cursor: pointer;
   img {
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.logo {
+  display: inline-block;
+  height: 174px;
+  margin: 23px;
+  vertical-align: top;
+  cursor: pointer;
+  border: #0FADF9 solid 8px;
+  border-radius: 100px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.title {
+  display: inline-block;
+  height: 110px;
+  padding: 23px 0 23px 17px;
+  font-size: 48px;
+  vertical-align: top;
+  color: #0C5AAE;
+  font-weight: 600;
 }
 
 .menu {
@@ -48,6 +72,8 @@
   float: right;
   height: 100%;
   overflow: hidden;
+  padding: 35px;
+  line-height: 40px;
   .action {
     display: inline-block;
     height: 100%;
@@ -64,11 +90,6 @@
     &:global(.opened) {
       background: @pro-header-hover-bg;
     }
-  }
-  .time {
-    padding: 0 20px;
-    font-size: 20px;
-    font-weight: 600;
   }
   .search {
     padding: 0 12px;

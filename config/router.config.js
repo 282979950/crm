@@ -18,14 +18,19 @@ export default [
             component: './Business/Welcome',
           },
           {
+            path: '/business/chooseService',
+            name: 'chooseService',
+            component: './Business/ChooseService',
+          },
+          {
             path: '/business/userNoInput',
             name: 'userNoInput',
             component: './Business/userNoInput',
           },
           {
-            path: '/business/userInfo',
-            name: 'userInfo',
-            component: './Business/userInfo',
+            path: '/business/machineMeterRecharge',
+            name: 'machineMeterRecharge',
+            component: './Business/MachineMeterRecharge',
           }
         ],
       },
