@@ -35,17 +35,17 @@ class ChooseService extends Component {
                     </Col>
                   </Row>
                   <Row>
-                    <Col span={10} offset={7} className={userQueryStyles.col}>
+                    <Col span={8} offset={8} className={userQueryStyles.col}>
                       <Input
                         placeholder="请输入户号"
-                        prefix={<Icon type="user" size="large" />}
                         size="large"
+                        className={userQueryStyles.input}
                       />
                     </Col>
                   </Row>
                   <Row>
                     <Col span={8} offset={8} className={userQueryStyles.col}>
-                      <Button type="primary" shape="round" icon="search" size="large" className={userQueryStyles.input}>
+                      <Button type="primary" shape="round" icon="search" size="large" className={userQueryStyles.btn}>
                         查询
                       </Button>
                     </Col>
