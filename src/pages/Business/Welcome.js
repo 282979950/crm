@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from 'react';
 import {Button, Card, Layout, Typography, Row, Col} from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
-import styles from './Welcome.less';
+import styles from './default.less';
 import logo from "../../assets/lanyan-logo-rect.svg";
 import router from "umi/router";
 

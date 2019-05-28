@@ -6,7 +6,6 @@ import { ContainerQuery } from 'react-container-query';
 import classNames from 'classnames';
 import Media from 'react-media';
 import logo from '../assets/logo.png';
-import Footer from './Footer';
 import Header from './Header';
 import Context from './MenuContext';
 import getPageTitle from '@/utils/getPageTitle';

@@ -6,26 +6,21 @@ export default [
     Routes: ['src/pages/Authorized'],
     routes: [
       // dashboard
-      { path: '/', redirect: '/business/welcome'},
+      { path: '/', redirect: '/business/chooseService'},
       {
         path: '/business',
         name: 'business',
         icon: 'business',
         routes: [
           {
-            path: '/business/welcome',
-            name: 'welcome',
-            component: './Business/Welcome',
-          },
-          {
             path: '/business/chooseService',
             name: 'chooseService',
             component: './Business/ChooseService',
           },
           {
-            path: '/business/userNoInput',
-            name: 'userNoInput',
-            component: './Business/userNoInput',
+            path: '/business/userQuery',
+            name: 'userQuery',
+            component: './Business/UserQuery',
           },
           {
             path: '/business/machineMeterRecharge',

@@ -1,7 +1,7 @@
 import React, {Component, Suspense} from 'react';
 import {Button, Input, Card, Layout, Typography, Form, Col, Row,} from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
-import styles from './Welcome.less';
+import styles from './default.less';
 import DescriptionList from '../../components/DescriptionList';
 import Header from "../../layouts/Header";
 import router from "umi/router";
