@@ -52,17 +52,17 @@ class ChooseService extends Component {
                   </Row>
                   <Row className={userQueryStyles.tips}>
                     <Col span={8} >
-                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 24px' }}>
+                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 50px' }}>
                         <Icon type="credit-card" className={userQueryStyles.icon}/>
                       </Card>
                     </Col>
                     <Col span={8}>
-                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 24px' }}>
+                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 50px' }}>
                         <Icon type="credit-card" className={userQueryStyles.icon}/>
                       </Card>
                     </Col>
                     <Col span={8}>
-                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 24px' }}>
+                      <Card bordered={false} className={userQueryStyles.tipCard} bodyStyle={{ borderRadius: '50px', backgroundColor:'#D8D8D8',margin: '0 50px' }}>
                         <Icon type="credit-card" className={userQueryStyles.icon}/>
                       </Card>
                     </Col>
