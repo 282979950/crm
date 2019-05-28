@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from 'react';
-import {Button, Card, Layout, Typography, Row, Col} from 'antd';
+import {Button, Card, Layout, Typography, Row, Col, Icon} from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import styles from './Welcome.less';
 import logo from "../../assets/lanyan-logo-rect.svg";
@@ -25,20 +25,21 @@ class ChooseService extends Component {
       <GridContent>
         <Suspense fallback={null}>
           <Card bordered={false} className={styles.card}>
-            <Row gutter={48}>
-              <Col span={24}>
-                <Title>请选择服务类型</Title>
-              </Col>
-            </Row>
-            <Row gutter={48}>
-              <Col span={6} offset={4}>
-                <Card className={styles.chooseServiceCard1} onClick={this.handleRechargeClick}>
-                  <Title style={{ "margin-bottom": "0px"}}>充值</Title>
+            <Row className={styles.row} gutter={48}>
+              <Col span={7} offset={4}>
+                <Card className={styles.chooseServiceCard} onClick={this.handleRechargeClick}>
+                  <div className={styles.chooseServiceTitle}>充值缴费</div>
+                  <Card className={styles.chooseServiceIconCard}>
+                    <Icon type="pay-circle" className={styles.chooseServiceIcon}/>
+                  </Card>
                 </Card>
               </Col>
-              <Col span={6} offset={4}>
-                <Card className={styles.chooseServiceCard2} onClick={this.handleLoadGasClick}>
-                  <Title style={{ "margin-bottom": "0px"}}>圈存</Title>
+              <Col span={7} offset={2}>
+                <Card className={styles.chooseServiceCard} onClick={this.handleLoadGasClick}>
+                  <div className={styles.chooseServiceTitle}>IC卡圈存</div>
+                  <Card className={styles.chooseServiceIconCard}>
+                    <Icon type="fire" className={styles.chooseServiceIcon}/>
+                  </Card>
                 </Card>
               </Col>
             </Row>
