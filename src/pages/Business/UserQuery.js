@@ -22,6 +22,12 @@ class ChooseService extends Component {
     });
   };
 
+  setConfirmModalVisible= value  => {
+    this.setState({
+      confirmModalVisible: value
+    });
+  };
+
   render() {
     const { form: { getFieldDecorator } } = this.props;
     return (
@@ -54,10 +60,14 @@ class ChooseService extends Component {
               </Row>
             </div>
           </Card>
+          <OrderConfirmModal
+            confirmModalVisible={confirmModalVisible}
+            setConfirmModalVisible={this.setConfirmModalVisible}
+          />
         </Suspense>
       </GridContent>
     );
   }
 }
 
-export default ChooseService;
+export default UserQuery;
