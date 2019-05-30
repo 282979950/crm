@@ -1,9 +1,9 @@
 import React, { Component, Suspense } from 'react';
-import {Card, Row, Col, Icon} from 'antd';
+import { Card, Icon } from 'antd';
+import router from "umi/router";
 import GridContent from '../../components/PageHeaderWrapper/GridContent';
 import styles from './default.less';
 import chooseServiceStyles from './ChooseService.less';
-import router from "umi/router";
 
 class ChooseService extends Component {
 
@@ -21,24 +21,16 @@ class ChooseService extends Component {
       <GridContent>
         <Suspense fallback={null}>
           <Card bordered={false} className={styles.card}>
-            <Row className={chooseServiceStyles.row} gutter={48}>
-              <Col span={7} offset={4}>
-                <Card className={chooseServiceStyles.card} onClick={this.handleRechargeClick}>
-                  <div className={chooseServiceStyles.title}>充值缴费</div>
-                  <Card className={chooseServiceStyles.iconCard}>
-                    <Icon type="pay-circle" className={chooseServiceStyles.icon}/>
-                  </Card>
-                </Card>
-              </Col>
-              <Col span={7} offset={2}>
-                <Card className={chooseServiceStyles.card} onClick={this.handleLoadGasClick}>
-                  <div className={chooseServiceStyles.title}>IC卡圈存</div>
-                  <Card className={chooseServiceStyles.iconCard}>
-                    <Icon type="fire" className={chooseServiceStyles.icon}/>
-                  </Card>
-                </Card>
-              </Col>
-            </Row>
+            <div className={chooseServiceStyles.row}>
+              <div onClick={this.handleRechargeClick}>
+                <span className={chooseServiceStyles.title}>充值缴费</span>
+                <Icon type="pay-circle" className={chooseServiceStyles.icon} />
+              </div>
+              <div onClick={this.handleLoadGasClick}>
+                <span className={chooseServiceStyles.title}>IC卡圈存</span>
+                <Icon type="fire" className={chooseServiceStyles.icon} />
+              </div>
+            </div>
           </Card>
         </Suspense>
       </GridContent>

@@ -23,6 +23,21 @@ export default [
             component: './Business/UserQuery',
           },
           {
+            path: '/business/userInfo',
+            name: 'userInfo',
+            component: './Business/UserInfo',
+          },
+          {
+            path: '/business/payment',
+            name: 'payment',
+            component: './Business/Payment',
+          },
+          {
+            path: '/business/loadGas',
+            name: 'loadGas',
+            component: './Business/LoadGas',
+          },
+          {
             path: '/business/machineMeterRecharge',
             name: 'machineMeterRecharge',
             component: './Business/MachineMeterRecharge',

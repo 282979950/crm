@@ -1,64 +1,92 @@
 .row {
-  padding: 66px 0;
-  height: 800px;
-}
-
-.mainCard {
-  margin: 0 -24px;
-  height: 800px;
+  width: 1366px;
+  height: 822px;
+  margin: 0 auto;
+  margin-top: 73px;
+  background: #F3F3F3;
   border-radius: 8px;
-}
-.col {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .content {
-  font-size: 36px;
-  font-weight: 600;
-  vertical-align: middle;
-  line-height: 72px;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 32px;
 }
 
 .title {
-  font-size: 48px;
+  width: 100%;
+  line-height: 96px;
+  background: #C04D1F;
   color: #FFFFFF;
-  font-weight: 600;
   border-radius: 8px;
-  background-color: #0c5aae;
-  vertical-align: middle;
-  line-height: 72px;
-  margin: -24px -24px 24px -24px;
+  background-image: url(../../assets/headImg1366.96.png);
+  font-size: 48px;
+  text-shadow: 0 2px 4px #00118D;
 }
 
 .input {
-  height: 50px;
-  font-size: 32px;
-  line-height: 36px;
-  border-radius: 50px;
-  padding: 6px 20px;
-  letter-spacing: 5px;
+  width: 427px;
+  height: 56px;
+  background: #FCFDFF;
+  border: 2px solid rgba(53, 105, 241, 0.24);
+  border-radius: 28px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 51px;
+
+  :global {
+    span {
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.75);
+      position: absolute;
+      left: 15px;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      background: none;
+      padding-left: 80px;
+      padding-right: 10px;
+      font-size: 28px;
+      height: 51px;
+      font-weight: bold;
+    }
+
+    .ant-input:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
 }
 
 .btn {
-  width: 100%;
-  height: 50px !important;
-  border-radius: 50px !important;
+  width: 427px;
+  height: 56px;
+  background-image: linear-gradient(225deg, #4994FA 0%, #235BF4 100%);
+  border-radius: 48.5px;
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-top: 32px;
 }
 
 .tips {
-  padding-top: 16px;
-}
+  margin-top: 79px;
 
-.tipCard {
-}
-
-.tipCardBody {
-  border-radius: 500px;
+  :global {
+    .ant-col {
+      width: 240px;
+      height: 240px;
+      background: #D8D8D8;
+      border-radius: 50%;
+    }
+  }
 }
 
 .icon {
-  font-size: 240px;
-  width: 240px;
-  height: 240px;
+  font-size: 160px;
+  margin-top: 36px;
 }
