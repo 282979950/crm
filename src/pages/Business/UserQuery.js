@@ -4,14 +4,14 @@ import router from "umi/router";
 import GridContent from '../../components/PageHeaderWrapper/GridContent';
 import styles from './default.less';
 import userQueryStyles from './UserQuery.less';
+import OrderConfirmModal from "./components/LoadGasConfirmModal";
 
 @Form.create()
-class ChooseService extends Component {
+class UserQuery extends Component {
 
   handleSearch = () => {
     const { form, dispatch } = this.props;
     form.validateFields((err, values) => {
-      console.log(values)
       if (err) return;
       dispatch({
         type: 'business/queryUserInfoByUserNo',
@@ -29,7 +29,7 @@ class ChooseService extends Component {
   };
 
   render() {
-    const { form: { getFieldDecorator } } = this.props;
+    const { form: { getFieldDecorator }, confirmModalVisible} = this.props;
     return (
       <GridContent>
         <Suspense fallback={null}>
@@ -41,10 +41,9 @@ class ChooseService extends Component {
                 <span>户号</span>
                 <Form.Item>
                   {getFieldDecorator('userId')(
-                    <Input />
+                    <Input autoComplete='off'/>
                   )}
                 </Form.Item>
-
               </div>
               <Button className={userQueryStyles.btn} onClick={this.handleSearch}>查询</Button>
               <Row className={userQueryStyles.tips} type="flex" justify="space-around">
