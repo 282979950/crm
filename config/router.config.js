@@ -38,6 +38,11 @@ export default [
             component: './Business/LoadGas',
           },
           {
+            path: '/business/mechanicalUser',
+            name: 'mechanicalUser',
+            component: './Business/MechanicalUser',
+          },
+          {
             path: '/business/machineMeterRecharge',
             name: 'machineMeterRecharge',
             component: './Business/MachineMeterRecharge',

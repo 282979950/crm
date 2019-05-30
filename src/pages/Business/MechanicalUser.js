@@ -7,7 +7,7 @@ import styles from './default.less';
 import loadGasStyles from './LoadGas.less';
 
 // const { TabPane } = Tabs;
-class LoadGas extends Component {
+class MechanicalUser extends Component {
 
   handleOk = () => {
     router.push('/business/payment');
@@ -21,7 +21,7 @@ class LoadGas extends Component {
             <div className={loadGasStyles.content}>
               <div className={loadGasStyles.head}>
                 <Row type="flex" justify="space-between">
-                  <Col span={11}>IC卡用户</Col>
+                  <Col span={11}>机械表用户</Col>
                   <Col span={11}>户号 20000088880000888800</Col>
                 </Row>
               </div>
@@ -34,7 +34,7 @@ class LoadGas extends Component {
                 </div>
                 <div className={loadGasStyles.userCard}>
                   <div className={loadGasStyles.userCardId}>
-                    <span>物理卡号</span>
+                    <span>上期止码</span>
                     <span>20000088880000888800</span>
                   </div>
                   <div>账户余额</div>
@@ -42,27 +42,37 @@ class LoadGas extends Component {
                 </div>
               </div>
               <div className={loadGasStyles.payment}>
-                <div className='head'>圈存</div>
+                <div className='head'>充值缴费</div>
                 <div className={loadGasStyles.paymentContent}>
                   <Row type="flex" justify="space-between" className='navTop'>
-                    <Col span={11}>
-                      <div>缴费金额(元)</div>
-                      <span>111.8</span>
+                    <Col span={5}>
+                      <div>上期使用燃气（方）</div>
+                      <span>999,999</span>
                     </Col>
                     <Col span={1}></Col>
-                    <Col span={11}>
-                      <div>缴费日期</div>
-                      <span>2019-05-30</span>
+                    <Col span={5}>
+                      <div>燃气价格（元）</div>
+                      <span>10</span>
+                    </Col>
+                    <Col span={1}></Col>
+                    <Col span={5}>
+                      <div>上期实际费用（元）</div>
+                      <span>9,999,990</span>
+                    </Col>
+                    <Col span={1}></Col>
+                    <Col span={5}>
+                      <div>账户余额（元）</div>
+                      <span>9,999,990</span>
                     </Col>
                   </Row>
                 </div>
 
                 <div className={loadGasStyles.paymentBottom}>
-                  <div>圈存气量</div>
+                  <div>本期应缴（元）</div>
                   <Row type="flex" justify="space-between">
-                    <Col span={16}>9999.990</Col>
+                    <Col span={16}>9,999,990</Col>
                     <Col span={8}>
-                      <Button>确认圈存</Button>
+                      <Button>去交费</Button>
                     </Col>
                   </Row>
                 </div>
@@ -75,4 +85,4 @@ class LoadGas extends Component {
   }
 }
 
-export default LoadGas;
+export default MechanicalUser;
