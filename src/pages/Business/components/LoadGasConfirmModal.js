@@ -19,10 +19,13 @@ class OrderConfirmModal extends React.Component {
         maskClosable={false}
         width={960}
       >
-        <div className={styles.title}>订单确认</div>
+        <div className={styles.title}>圈存信息</div>
         <div className={styles.divider}/>
-        <div className={styles.container}>
-          <Descriptions title={<div className={styles.userInfoTitle}>账户信息</div>} column={1}>
+        <div className={styles.container} style={{paddingLeft: 49, paddingRight: 49}}>
+          <Descriptions
+            title={<div className={styles.userInfoTitle} style={{marginLeft: '-24px'}}>账户信息</div>}
+            column={1}
+          >
             <Item label={<span className={styles.userInfoLabel}>用户户号</span>}>
               <span className={styles.userInfoValue}>1234567890</span>
             </Item>
@@ -37,39 +40,6 @@ class OrderConfirmModal extends React.Component {
         <div className={styles.divider}/>
         <div className={styles.container}>
           <div className={styles.userInfoTitle}>缴费信息</div>
-          <Row>
-            <Col span={19} offset={5} className={styles.gasPriceContainer}>
-              <Col span={1}>
-                <div className={styles.gasPriceTagIconGreen}/>
-              </Col>
-              <Col span={7}>
-                <div>一阶梯340方（2.48元/立方）</div>
-              </Col>
-              <Col span={1}>
-                <div className={styles.gasPriceTagIconYellow}/>
-              </Col>
-              <Col span={7}>
-                <div>二阶梯240方（3.14元/立方）</div>
-              </Col>
-              <Col span={1}>
-                <div className={styles.gasPriceTagIconBlue}/>
-              </Col>
-              <Col span={7}>
-                <div>三阶梯无上限（3.48元/立方）</div>
-              </Col>
-            </Col>
-          </Row>
-          <Row span={24} style={{paddingTop: 16}}>
-            <Col span={6}>
-              <div className={styles.gasPriceLegendGreen}/>
-            </Col>
-            <Col span={6}>
-              <div className={styles.gasPriceLegendYellow}/>
-            </Col>
-            <Col span={12}>
-              <div className={styles.gasPriceLegendBlue}/>
-            </Col>
-          </Row>
           <Row span={24} style={{marginTop: 8}}>
             <Row style={{height: 35, paddingTop: 3, backgroundColor: "rgba(216,216,216,0.3)"}}>
               <Col span={12}>
@@ -80,7 +50,7 @@ class OrderConfirmModal extends React.Component {
                   color: 'rgba(0,0,0,0.75)',
                   padding: '0 24px'
                 }}>
-                  缴费时间
+                  充值时间
                 </div>
               </Col>
               <Col span={12}>
@@ -104,7 +74,7 @@ class OrderConfirmModal extends React.Component {
                   color: 'rgba(0,0,0,0.75)',
                   padding: '0 24px'
                 }}>
-                  购买燃气
+                  充值气量
                 </div>
               </Col>
               <Col span={12}>
@@ -115,7 +85,7 @@ class OrderConfirmModal extends React.Component {
                   textAlign: 'right',
                   padding: '0 24px'
                 }}>
-                  9,999 方
+                  999.00 方
                 </div>
               </Col>
             </Row>
@@ -128,7 +98,7 @@ class OrderConfirmModal extends React.Component {
                   color: 'rgba(0,0,0,0.75)',
                   padding: '0 24px'
                 }}>
-                  充值费用
+                  充值金额
                 </div>
               </Col>
               <Col span={12}>
@@ -152,7 +122,7 @@ class OrderConfirmModal extends React.Component {
                   color: 'rgba(0,0,0,0.75)',
                   padding: '0 24px'
                 }}>
-                  支付金额
+                  圈存时间
                 </div>
               </Col>
               <Col span={12}>
@@ -163,7 +133,7 @@ class OrderConfirmModal extends React.Component {
                   textAlign: 'right',
                   padding: '0 24px'
                 }}>
-                  100,000.00 元
+                  2019-09-09 16:32:45
                 </div>
               </Col>
             </Row>
@@ -199,7 +169,7 @@ class OrderConfirmModal extends React.Component {
                 }}
                 onClick={() => setConfirmModalVisible(false)}
               >
-                确认缴费
+                确认圈存
               </div>
             </Col>
           </Row>
