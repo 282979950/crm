@@ -7,13 +7,19 @@ import styles from './default.less';
 import paymentStyles from './Payment.less';
 
 // const { TabPane } = Tabs;
-class Payment extends Component {
+class ICUserPayment extends Component {
 
   handleOk = () => {
     router.push('/business/payment');
-  }
+  };
+
+  state = {
+    currentPayment: 100
+  };
 
   render() {
+    const {location: {state: {money}}} = this.props;
+    const { currentPayment } = this.state;
     return (
       <GridContent>
         <Suspense fallback={null}>
@@ -23,18 +29,18 @@ class Payment extends Component {
                 <div className={paymentStyles.leftHead}>
                   <div className='head'>
                     <Row type="flex" justify="space-between">
-                      <Col span={11}>充值缴费</Col>
+                      <Col span={11}>请投入纸币</Col>
                       <Col span={11}>29s</Col>
                     </Row>
                   </div>
                   <div className='content'>
                     <Row type="flex" justify="space-between">
-                      <Col span={11}>本期应缴（元）</Col>
-                      <Col span={11}>已放入（张）</Col>
+                      <Col span={6}>应缴费用（元）</Col>
+                      <Col span={8}>实缴费用（元）</Col>
                     </Row>
                     <Row type="flex" justify="space-between">
-                      <Col span={16}>1,000.00/<span>9,990.00</span></Col>
-                      <Col span={8}>10/<span>100</span></Col>
+                      <Col span={8}>{parseInt(money).toFixed(2)}</Col>
+                      <Col span={16}>{currentPayment.toFixed(2)}/<span>{(Math.ceil(parseInt(money)/100)*100).toFixed(2)}</span></Col>
                     </Row>
                   </div>
                 </div>
@@ -67,8 +73,12 @@ class Payment extends Component {
               <div className='right'>
                 <div className={paymentStyles.rightContent}>
                   <div>用户须知</div>
-                  <div>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacu</div>
-                  <Button onClick={this.handleOk}>确认缴费</Button>
+                  <div>
+                    1. 现金充值机只支持100元纸币
+                    <br/>
+                    2. 现金充值机不支持找零业务，剩余金额将存入账户余额中
+                  </div>
+                  <Button onClick={this.handleOk} disabled={Math.ceil(parseInt(money)/100)*100 > currentPayment}>确认缴费</Button>
                   <Button onClick={this.handleOk}>取消</Button>
                 </div>
               </div>
@@ -80,4 +90,4 @@ class Payment extends Component {
   }
 }
 
-export default Payment;
+export default ICUserPayment;

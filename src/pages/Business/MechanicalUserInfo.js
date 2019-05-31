@@ -7,7 +7,7 @@ import styles from './default.less';
 import loadGasStyles from './LoadGas.less';
 
 // const { TabPane } = Tabs;
-class MechanicalUser extends Component {
+class MechanicalUserInfo extends Component {
 
   handleOk = () => {
     router.push('/business/payment');
@@ -85,4 +85,4 @@ class MechanicalUser extends Component {
   }
 }
 
-export default MechanicalUser;
+export default MechanicalUserInfo;

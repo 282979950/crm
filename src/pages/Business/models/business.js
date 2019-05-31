@@ -10,7 +10,11 @@ export default {
   namespace: 'business',
 
   state: {
-    userInfo: null
+    userInfo: null,
+    paymentInfo: {
+      money: null,
+      mount: null
+    }
   },
 
   effects: {
@@ -20,7 +24,7 @@ export default {
         type: 'saveUserInfo',
         payload: response.data,
       });
-      if (callback) callback();
+      if (callback) callback(response);
     },
     * machineMeterUserRecharge({payload, callback}, {call, put}) {
       const response = yield call(machineMeterUserRecharge, payload);
@@ -38,12 +42,24 @@ export default {
       const response = yield call(icMeterUserRecharge, payload);
       if (callback) callback();
     },
+    * savePaymentInfo({payload, callback}, {call, put}) {
+      yield put({
+        type: 'savePaymentInfo',
+        payload: payload,
+      });
+      if (callback) callback();
+    },
   },
 
   reducers: {
     saveUserInfo(state, action) {
       return {
         userInfo: action.payload,
+      };
+    },
+    savePaymentInfo(state, action) {
+      return {
+        paymentInfo: action.payload,
       };
     },
   },

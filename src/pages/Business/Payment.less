@@ -152,8 +152,7 @@
 .rightContent {
   width: calc(100% - 32px);
   height: calc(100% - 32px);
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 16px auto 0;
   background: #FFFFFF;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
   border-radius: 8px;
@@ -173,26 +172,32 @@
     }
 
     button {
-      margin: 0 auto;
-      margin-top: 16px;
+      margin: 16px auto 0;
       width: 100%;
       height: 72px;
       font-size: 28px;
       outline: none;
       border-radius: 8px;
+      color: #ffffff;
+      background: linear-gradient(225deg, #4994FA 0%, #235BF4 100%);
+      border: none;
     }
 
-    button:nth-child(3),
-    button:nth-child(3):hover,
-    button:nth-child(3):focus {
+    button[disabled] {
       color: #ffffff;
       background: #CCCCCC;
       border: none;
     }
 
-    button:nth-child(4),
-    button:nth-child(4):hover,
-    button:nth-child(4):focus {
+    //button:nth-child(3),
+    //button:nth-child(3):hover,
+    //button:nth-child(3):focus {
+    //  color: #ffffff;
+    //  background: #CCCCCC;
+    //  border: none;
+    //}
+
+    button:nth-child(4) {
       border: 2px solid rgba(0, 0, 0, 0.12) !important;
       background: #ffffff !important;
       color: #3D3D3D !important;

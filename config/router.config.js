@@ -23,14 +23,14 @@ export default [
             component: './Business/UserQuery',
           },
           {
-            path: '/business/userInfo',
+            path: '/business/icUserInfo',
             name: 'userInfo',
-            component: './Business/UserInfo',
+            component: './Business/ICUserInfo',
           },
           {
-            path: '/business/payment',
-            name: 'payment',
-            component: './Business/Payment',
+            path: '/business/icUserPayment',
+            name: 'icUserPayment',
+            component: './Business/ICUserPayment',
           },
           {
             path: '/business/loadGas',
@@ -38,9 +38,14 @@ export default [
             component: './Business/LoadGas',
           },
           {
-            path: '/business/mechanicalUser',
+            path: '/business/mechanicalUserInfo',
             name: 'mechanicalUser',
-            component: './Business/MechanicalUser',
+            component: './Business/MechanicalUserInfo',
+          },
+          {
+            path: '/business/mechanicalUserPayment',
+            name: 'mechanicalUserPayment',
+            component: './Business/MechanicalUserPayment',
           },
           {
             path: '/business/machineMeterRecharge',

@@ -4,7 +4,7 @@ import styles from './OrderConfirmModal.less';
 
 const {Item} = Descriptions;
 
-class OrderConfirmModal extends React.Component {
+class LoadGasConfirmModal extends React.Component {
 
   render() {
     const {confirmModalVisible, setConfirmModalVisible} = this.props;
@@ -179,4 +179,4 @@ class OrderConfirmModal extends React.Component {
   }
 }
 
-export default OrderConfirmModal;
+export default LoadGasConfirmModal;

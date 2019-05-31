@@ -4,8 +4,12 @@ import router from "umi/router";
 import GridContent from '../../components/PageHeaderWrapper/GridContent';
 import styles from './default.less';
 import userQueryStyles from './UserQuery.less';
-import OrderConfirmModal from "./components/LoadGasConfirmModal";
+import {connect} from "dva";
 
+@connect(({ business, loading }) => ({
+  business,
+  loading: loading.models.business,
+}))
 @Form.create()
 class UserQuery extends Component {
 
@@ -18,18 +22,21 @@ class UserQuery extends Component {
         payload: {
           userId: form.getFieldValue("userId")
         },
+        callback: (response) => {
+          if(response.data.meterType === "1") {
+            // 机械表
+            router.push("/business/mechanicalUserInfo");
+          } else {
+            // IC卡表
+            router.push("/business/icUserInfo");
+          }
+        }
       });
     });
   };
 
-  setConfirmModalVisible= value  => {
-    this.setState({
-      confirmModalVisible: value
-    });
-  };
-
   render() {
-    const { form: { getFieldDecorator }, confirmModalVisible} = this.props;
+    const {form: {getFieldDecorator}} = this.props;
     return (
       <GridContent>
         <Suspense fallback={null}>
@@ -59,10 +66,6 @@ class UserQuery extends Component {
               </Row>
             </div>
           </Card>
-          <OrderConfirmModal
-            confirmModalVisible={confirmModalVisible}
-            setConfirmModalVisible={this.setConfirmModalVisible}
-          />
         </Suspense>
       </GridContent>
     );
